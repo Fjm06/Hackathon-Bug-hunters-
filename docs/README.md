@@ -59,7 +59,13 @@ To make the app accessible via a public URL:
    - Build Command: `pip install -r requirements.txt`
    - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 
-3. **Heroku**:
+3. **Replit**:
+   - Create Repl, select Python
+   - Upload files or clone repo
+   - Run: `pip install -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8080`
+   - Make public to get shareable URL
+
+4. **Heroku**:
    - Create app
    - Add Python buildpack
    - Procfile: `web: uvicorn main:app --host 0.0.0.0 --port $PORT`

@@ -15,7 +15,8 @@ function initCaptions() {
 }
 
 function startServerSTT() {
-    sttWs = new WebSocket(`ws://${window.location.host}/ws/stt`);
+    const wsURL = `${window.location.origin.replace("http", "ws")}/ws/stt`;
+    sttWs = new WebSocket(wsURL);
     sttWs.onopen = () => {
         console.log('STT WebSocket connected');
         // Send audio chunks (stub: send dummy data)
