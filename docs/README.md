@@ -42,45 +42,13 @@ Open http://localhost:8080 in two browser tabs, enter the same room ID (e.g., "d
 - frontend/translation_engine.js
 - backend/translate.py
 
-## Public Hosting
-To make the app accessible via a public URL:
-
-**Note**: This app requires a Python backend with WebSocket support. Platforms like Vercel (frontend-only) won't work. Use one of these:
-
-1. **Railway** (recommended):
-   - Connect GitHub repo
-   - Set build command: `pip install -r requirements.txt`
-   - Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - Railway auto-detects Python and provides WebSocket support
-
-2. **Render**:
-   - Create Web Service
-   - Runtime: Python
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-
-3. **Replit**:
-   - Create Repl, select Python
-   - Upload files or clone repo
-   - Run: `pip install -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8080`
-   - Make public to get shareable URL
-
-4. **Heroku**:
-   - Create app
-   - Add Python buildpack
-   - Procfile: `web: uvicorn main:app --host 0.0.0.0 --port $PORT`
-
-The app serves both backend APIs and frontend static files. Get the public URL from the platform dashboard.
-
 ## Demo Script
-1. Open the public URL in browser
-2. Enter a call name (e.g., "demo")
-3. Click "Join Call"
-4. Share the URL and call name with others
-5. Multiple participants can join the same call
-6. Speak into microphone - captions appear
-7. Change language dropdown - translations show
-8. Test fallbacks if backend services fail
+1. Open two browser windows to http://localhost:8080
+2. Enter "demo" as room ID in both
+3. Click "Join Call" in both
+4. Speak into microphone - captions appear
+5. Change language dropdown - translations show
+6. Test fallbacks by disconnecting backend
 
 ## Debugging
 - Check browser console for logs

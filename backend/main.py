@@ -1,6 +1,5 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from signaling import signaling_handler
 from stt import stt_handler
 from translate import router as translate_router
@@ -19,9 +18,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Serve frontend static files
-app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
 
 # --- MILESTONE 1 START (WebRTC Setup) ---
 @app.websocket("/ws/signal/{room_id}")
