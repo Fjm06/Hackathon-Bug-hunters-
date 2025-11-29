@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call with Captions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Video Call with Captions</h1>
+        <div class="status" id="status">Status: Waiting</div>
+        
+        <div class="controls">
+            <input type="text" id="roomId" placeholder="Room ID" value="demo">
+            <button id="joinBtn">Join Call</button>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+        
+        <div class="videos">
+            <div class="video-container">
+                <video id="localVideo" autoplay muted></video>
+                <div class="caption-box" id="localCaption">You: </div>
+            </div>
+            <div class="video-container">
+                <video id="remoteVideo" autoplay></video>
+                <div class="caption-box" id="remoteCaption">Peer: </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="webrtc_basic.js"></script>
+    <script src="captions_realtime.js"></script>
+    <script src="translation_engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

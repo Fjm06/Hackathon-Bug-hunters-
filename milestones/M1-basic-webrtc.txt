@@ -1,0 +1,17 @@
+Milestone 1: Basic WebRTC Setup
+
+Files:
+- backend/signaling.py (entire file)
+- backend/main.py (WebSocket signaling route)
+- frontend/index.html (basic UI elements)
+- frontend/style.css (layout styles)
+- frontend/webrtc_basic.js (entire file)
+- frontend/script.js (join button handler)
+
+Functions:
+- signaling_handler (backend/signaling.py)
+- startLocalVideo (frontend/webrtc_basic.js)
+- createPeerConnection (frontend/webrtc_basic.js)
+- joinCall (frontend/webrtc_basic.js)
+- createOffer (frontend/webrtc_basic.js)
+- updateStatus (frontend/webrtc_basic.js and script.js)

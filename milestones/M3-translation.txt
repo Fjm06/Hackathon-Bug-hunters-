@@ -1,0 +1,14 @@
+Milestone 3: Translation Layer
+
+Files:
+- backend/translate.py (entire file)
+- backend/main.py (translate router include)
+- frontend/translation_engine.js (entire file)
+- frontend/index.html (language select dropdown)
+- frontend/captions_realtime.js (displayCaption override)
+
+Functions:
+- translate_text (backend/translate.py)
+- translateText (frontend/translation_engine.js)
+- displayTranslatedCaption (frontend/translation_engine.js)
+- updateTargetLang (frontend/translation_engine.js)

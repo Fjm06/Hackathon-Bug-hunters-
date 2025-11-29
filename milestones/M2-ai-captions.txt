@@ -1,0 +1,15 @@
+Milestone 2: Real-Time Captions
+
+Files:
+- backend/stt.py (entire file)
+- backend/main.py (STT WebSocket route)
+- frontend/captions_realtime.js (entire file)
+- frontend/index.html (caption display elements)
+- frontend/script.js (initCaptions call)
+
+Functions:
+- stt_handler (backend/stt.py)
+- initCaptions (frontend/captions_realtime.js)
+- startServerSTT (frontend/captions_realtime.js)
+- startClientSTT (frontend/captions_realtime.js)
+- displayCaption (frontend/captions_realtime.js)
