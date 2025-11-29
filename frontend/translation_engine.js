@@ -6,7 +6,7 @@ async function translateText(text) {
     if (targetLang === 'en') return text; // No translation needed
 
     try {
-        const response = await fetch('http://localhost:8000/translate', {
+        const response = await fetch('/translate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ text, target_lang: targetLang })

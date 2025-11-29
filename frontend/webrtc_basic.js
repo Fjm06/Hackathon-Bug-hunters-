@@ -41,7 +41,7 @@ function createPeerConnection() {
 }
 
 async function joinCall(roomId) {
-    signalingWs = new WebSocket(`ws://localhost:8000/ws/signal/${roomId}`);
+    signalingWs = new WebSocket(`ws://${window.location.host}/ws/signal/${roomId}`);
     signalingWs.onopen = () => {
         console.log('Signaling WebSocket connected');
         createPeerConnection();
