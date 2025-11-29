@@ -45,10 +45,26 @@ Open http://localhost:8080 in two browser tabs, enter the same room ID (e.g., "d
 ## Public Hosting
 To make the app accessible via a public URL:
 
-1. Deploy the backend to a platform like Railway, Render, or Heroku.
-2. Set the build command to `pip install -r requirements.txt` and start command to `uvicorn main:app --host 0.0.0.0 --port $PORT`.
-3. The app serves both backend APIs and frontend static files.
-4. Get the public URL from the platform.
+**Note**: This app requires a Python backend with WebSocket support. Platforms like Vercel (frontend-only) won't work. Use one of these:
+
+1. **Railway** (recommended):
+   - Connect GitHub repo
+   - Set build command: `pip install -r requirements.txt`
+   - Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+   - Railway auto-detects Python and provides WebSocket support
+
+2. **Render**:
+   - Create Web Service
+   - Runtime: Python
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+3. **Heroku**:
+   - Create app
+   - Add Python buildpack
+   - Procfile: `web: uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+The app serves both backend APIs and frontend static files. Get the public URL from the platform dashboard.
 
 ## Demo Script
 1. Open the public URL in browser
